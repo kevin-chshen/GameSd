@@ -1,0 +1,6 @@
+{
+    "name": "ShangDaoServer",
+    "dependencies": {},
+    "scan": "app",
+    "beans": [{}]
+}

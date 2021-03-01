@@ -1,0 +1,46 @@
+{
+    "11": {
+        "shop_type_id": 11,
+        "shop_type_name": "道具商店"
+    },
+    "12": {
+        "shop_type_id": 12,
+        "shop_type_name": "特惠限购"
+    },
+    "13": {
+        "shop_type_id": 13,
+        "shop_type_name": "VIP限购"
+    },
+    "21": {
+        "shop_type_id": 21,
+        "shop_type_name": "人才市场"
+    },
+    "22": {
+        "shop_type_id": 22,
+        "shop_type_name": "猎头中心"
+    },
+    "31": {
+        "shop_type_id": 31,
+        "shop_type_name": "豪车商店"
+    },
+    "32": {
+        "shop_type_id": 32,
+        "shop_type_name": "涂装商店"
+    },
+    "41": {
+        "shop_type_id": 41,
+        "shop_type_name": "流量商店"
+    },
+    "51": {
+        "shop_type_id": 51,
+        "shop_type_name": "贡献商店"
+    },
+    "52": {
+        "shop_type_id": 52,
+        "shop_type_name": "贸易商店"
+    },
+    "61": {
+        "shop_type_id": 61,
+        "shop_type_name": "团建商店"
+    }
+}

@@ -1,0 +1,847 @@
+{
+  "game.actInvestFundsHandler.query" : {
+  },
+
+  "game.actInvestFundsHandler.buy" : {
+  },
+
+  "game.actInvestFundsHandler.fetch" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.activityHandler.query" : {
+  },
+
+  "game.actMonthCardHandler.query" : {
+  },
+
+  "game.actMonthCardHandler.buy" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.actMonthCardHandler.fetch" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.autoShowHandler.getInfo" : {
+  },
+
+  "game.autoShowHandler.start" : {
+    "required uInt32 type" : 1,
+    "required uInt32 rewardTypeIndex" : 2,
+    "repeated uInt32 cardList" : 3
+  },
+
+  "game.autoShowHandler.end" : {
+    "required uInt32 type" : 1,
+    "required uInt32 isInAdvance" : 2
+  },
+
+  "game.autoShowHandler.rob" : {
+    "required string targetUid" : 1,
+    "required uInt32 type" : 2,
+    "repeated uInt32 cardList" : 3
+  },
+
+  "game.autoShowHandler.buyBuff" : {
+  },
+
+  "game.autoShowHandler.recommend" : {
+    "required uInt32 isRefresh" : 1,
+    "optional uInt32 isUseDiamond" : 2
+  },
+
+  "game.autoShowHandler.addRobTimes" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.itemHandler.getBackpackItemInfo" : {
+  },
+
+  "game.itemHandler.sellBackpackItem" : {
+    "required uInt32 itemID" : 1,
+    "required uInt32 itemNum" : 2
+  },
+
+  "game.itemHandler.sellBatchBackpackItem" : {
+    "repeated uInt32 idList" : 1
+  },
+
+  "game.itemHandler.useBackpackItem" : {
+    "required uInt32 itemID" : 1,
+    "required uInt32 itemNum" : 2
+  },
+
+  "game.itemHandler.composeBackpackItem" : {
+    "required uInt32 itemID" : 1,
+    "required uInt32 itemNum" : 2
+  },
+
+  "game.itemHandler.useOptionalGift" : {
+    "required uInt32 itemID" : 1,
+    "required uInt32 choose" : 2
+  },
+
+  "battle.battleHandler.getBattleRecord" : {
+    "required string id" : 1
+  },
+
+  "game.carHandler.carGetInfo" : {
+  },
+
+  "game.carHandler.carEquip" : {
+    "required uInt32 carId" : 1,
+    "required uInt32 cardId" : 2
+  },
+
+  "game.carHandler.carUpgrade" : {
+    "required uInt32 carId" : 1
+  },
+
+  "game.carHandler.carRefit" : {
+    "required uInt32 carId" : 1,
+    "required uInt32 part" : 2
+  },
+
+  "game.carHandler.carReset" : {
+    "required uInt32 carId" : 1
+  },
+
+  "game.carHandler.carSell" : {
+    "repeated uInt32 carIdList" : 1
+  },
+
+  "game.carHandler.carCompound" : {
+    "required uInt32 cId" : 1,
+    "required uInt32 num" : 2
+  },
+
+  "game.carHandler.carQuickCompound" : {
+    "repeated uInt32 cIdList" : 1
+  },
+
+  "game.carHandler.carNew" : {
+    "required uInt32 cId" : 1
+  },
+
+  "game.cardHandler.cardGetInfo" : {
+  },
+
+  "game.cardHandler.cardFormation" : {
+    "required uInt32 upCardId" : 1,
+    "required uInt32 downCardId" : 2
+  },
+
+  "game.cardHandler.cardUpgrade" : {
+    "required uInt32 cardId" : 1,
+    "required uInt32 level" : 2
+  },
+
+  "game.cardHandler.cardStage" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.cardHandler.cardStar" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.cardHandler.cardReset" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.cardHandler.cardActive" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.cardHandler.cardNew" : {
+    "required uInt32 cardId" : 1
+  },
+
+  "game.chatHandler.chat" : {
+    "required uInt32 msgType" : 1,
+    "required uInt32 channelId" : 2,
+    "optional string targetUid" : 3,
+    "optional string text" : 4,
+    "optional uInt32 templateId" : 5,
+    "optional string voice" : 6,
+    "optional uInt32 voiceTime" : 7,
+    "repeated string param" : 8,
+    "optional uInt32 isSelf" : 9
+  },
+
+  "game.chatHandler.queryOfflineChat" : {
+  },
+
+  "game.chatHandler.queryOnline" : {
+    "repeated string uid" : 1
+  },
+
+  "game.clubHandler.clubGetInfo" : {
+  },
+
+  "game.clubHandler.clubPostcardTime" : {
+  },
+
+  "game.clubHandler.clubUpgrade" : {
+    "required uInt32 clubType" : 1
+  },
+
+  "game.clubHandler.clubMake" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.clubHandler.clubGift" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.clubHandler.clubIntimacyReward" : {
+    "required uInt32 id" : 1,
+    "required uInt32 index" : 2
+  },
+
+  "game.clubHandler.clubReset" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.clubHandler.clubPostcard" : {
+  },
+
+  "game.dungeonHandler.getDungeonInfo" : {
+  },
+
+  "game.dungeonHandler.encourageDungeon" : {
+  },
+
+  "game.dungeonHandler.chooseEventDungeon" : {
+    "required uInt32 para" : 1
+  },
+
+  "game.dungeonHandler.receiveBoxRewardDungeon" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.dungeonHandler.enterBattle" : {
+  },
+
+  "game.fameHandler.fameGetInfo" : {
+  },
+
+  "game.fameHandler.fameUpgrade" : {
+  },
+
+  "game.fameHandler.getDailyReward" : {
+  },
+
+  "game.fameHandler.rename" : {
+    "required string name" : 1
+  },
+
+  "game.fameHandler.alterManifesto" : {
+    "required string manifesto" : 1
+  },
+
+  "global.flowRateHandler.flowRateGetInfo" : {
+    "optional uInt32 isRefresh" : 1
+  },
+
+  "global.flowRateHandler.flowRateChallenge" : {
+    "required uInt32 rank" : 1,
+    "required string challengeUid" : 2
+  },
+
+  "global.flowRateHandler.flowRateSweep" : {
+    "required uInt32 rank" : 1
+  },
+
+  "global.flowRateHandler.flowRateOfflineReward" : {
+  },
+
+  "global.flowRateHandler.flowRateBattleRecord" : {
+  },
+
+  "global.flowRateHandler.flowRateBuy" : {
+  },
+
+  "global.friendHandler.searchFriend" : {
+    "required string word" : 1
+  },
+
+  "global.friendHandler.recommendFriend" : {
+  },
+
+  "global.friendHandler.getFriendList" : {
+  },
+
+  "global.friendHandler.applyFriend" : {
+    "required string uid" : 1
+  },
+
+  "global.friendHandler.acceptApplyFriend" : {
+    "repeated string uid" : 1
+  },
+
+  "global.friendHandler.denyApplyFriend" : {
+    "repeated string uid" : 1
+  },
+
+  "global.friendHandler.deleteFriend" : {
+    "repeated string uid" : 1
+  },
+
+  "global.friendHandler.block" : {
+    "required string uid" : 1
+  },
+
+  "global.friendHandler.unBlock" : {
+    "required string uid" : 1
+  },
+
+  "game.friendshipHandler.getFriendshipInfo" : {
+  },
+
+  "game.friendshipHandler.start" : {
+  },
+
+  "game.friendshipHandler.moveAction" : {
+    "required uInt32 nextIndex" : 1
+  },
+
+  "game.friendshipHandler.retryBattle" : {
+  },
+
+  "game.friendshipHandler.getSelectBuff" : {
+  },
+
+  "game.friendshipHandler.selectBuff" : {
+    "required uInt32 buffID" : 1
+  },
+
+  "game.friendshipHandler.finishShopping" : {
+  },
+
+  "game.friendshipHandler.receiveStageReward" : {
+  },
+
+  "game.friendshipHandler.enterNextStage" : {
+    "optional uInt32 difficulty" : 1
+  },
+
+  "game.friendshipHandler.finish" : {
+  },
+
+  "game.friendshipHandler.buyBuff" : {
+  },
+
+  "game.friendshipHandler.buyTimes" : {
+  },
+
+  "game.gmHandler.executeCommand" : {
+    "required string cmd" : 1,
+    "repeated string param" : 2
+  },
+
+  "game.gmHandler.getCommand" : {
+  },
+
+  "game.guideHandler.getInfo" : {
+  },
+
+  "game.guideHandler.set" : {
+    "required uInt32 key" : 1,
+    "required uInt32 value" : 2
+  },
+
+  "game.investHandler.getInvestInfo" : {
+  },
+
+  "game.investHandler.refreshInvest" : {
+  },
+
+  "game.investHandler.attendInvest" : {
+    "required string id" : 1
+  },
+
+  "game.investHandler.investProgress" : {
+  },
+
+  "game.investHandler.readyInvest" : {
+    "required string name" : 1
+  },
+
+  "game.investHandler.getRecommendInvest{" : {
+  },
+
+  "global.investHandler.inviteInvest" : {
+    "required string id" : 1,
+    "required uInt32 tag" : 2,
+    "optional string targetUID" : 3
+  },
+
+  "game.investHandler.selfInvest" : {
+    "required string id" : 1
+  },
+
+  "game.investHandler.togetherInvest" : {
+    "required string id" : 1,
+    "required string targetID" : 2
+  },
+
+  "global.investHandler.getCooperateProjectInfo" : {
+    "required string id" : 1
+  },
+
+  "global.leagueHandler.leagueGetInfo" : {
+  },
+
+  "global.leagueHandler.leagueMemberInfo" : {
+  },
+
+  "global.leagueHandler.leagueCreate" : {
+    "required string name" : 1,
+    "optional string badge" : 2,
+    "optional string manifesto" : 3,
+    "optional uInt32 joinType" : 4
+  },
+
+  "global.leagueHandler.leagueDissolve" : {
+  },
+
+  "global.leagueHandler.leagueJoin" : {
+    "required uInt32 leagueId" : 1
+  },
+
+  "global.leagueHandler.leagueExit" : {
+  },
+
+  "global.leagueHandler.leagueKickOut" : {
+    "required string uid" : 1
+  },
+
+  "global.leagueHandler.leagueQuery" : {
+    "required string condition" : 1
+  },
+
+  "global.leagueHandler.leagueOneKeyApply" : {
+    "repeated uInt32 leagueIdList" : 1
+  },
+
+  "global.leagueHandler.leagueAgree" : {
+    "required string uid" : 1
+  },
+
+  "global.leagueHandler.leagueRefuse" : {
+    "required string uid" : 1
+  },
+
+  "global.leagueHandler.leagueJob" : {
+    "required string uid" : 1,
+    "required uInt32 job" : 2
+  },
+
+  "global.leagueHandler.leagueTransfer" : {
+    "required string uid" : 1
+  },
+
+  "global.leagueHandler.leagueChangeInfo" : {
+    "required uInt32 type" : 1,
+    "required string newValue" : 2
+  },
+
+  "global.leagueHandler.leagueBuildGetInfo" : {
+  },
+
+  "global.leagueHandler.leagueBuild" : {
+    "required uInt32 id" : 1
+  },
+
+  "global.leagueHandler.leagueGetBuildBox" : {
+    "required uInt32 id" : 1
+  },
+
+  "global.leagueHandler.leagueTechnologyGetInfo" : {
+  },
+
+  "global.leagueHandler.leagueTechnologyUpgrade" : {
+    "required uInt32 skillId" : 1
+  },
+
+  "global.leagueProjectHandler.projectGetInfo" : {
+  },
+
+  "global.leagueProjectHandler.projectOpen" : {
+    "required uInt32 id" : 1,
+    "optional uInt32 type" : 2
+  },
+
+  "global.leagueProjectHandler.projectDonation" : {
+    "required uInt32 type" : 1
+  },
+
+  "global.leagueProjectHandler.projectDonationRanking" : {
+  },
+
+  "global.leagueProjectHandler.projectNegotiate" : {
+  },
+
+  "global.leagueProjectHandler.projectDamageRanking" : {
+  },
+
+  "global.leagueProjectHandler.projectBuyNum" : {
+  },
+
+  "global.leagueProjectHandler.projectAccredit" : {
+    "optional uInt32 pos" : 1,
+    "optional uInt32 cardId" : 2
+  },
+
+  "global.leagueProjectHandler.projectUnload" : {
+    "optional string uid" : 1
+  },
+
+  "game.livePlatformHandler.query" : {
+  },
+
+  "game.livePlatformHandler.active" : {
+    "required uInt32 platform" : 1
+  },
+
+  "game.livePlatformHandler.upgrade" : {
+    "required uInt32 platform" : 1
+  },
+
+  "game.livePlatformHandler.recruitStaff" : {
+    "required uInt32 platform" : 1,
+    "required uInt32 numAdd" : 2
+  },
+
+  "game.livePlatformHandler.dispatch" : {
+    "optional uInt32 platform" : 1,
+    "optional uInt32 cardId" : 2,
+    "optional uInt32 slot" : 3
+  },
+
+  "game.livePlatformHandler.retire" : {
+    "required uInt32 platform" : 1,
+    "required uInt32 cardId" : 2
+  },
+
+  "game.livePlatformHandler.addMoney" : {
+  },
+
+  "game.livePlatformActivityHandler.operate" : {
+  },
+
+  "game.livePlatformActivityHandler.operateAward" : {
+    "required string key" : 1
+  },
+
+  "game.livePlatformEventHandler.query" : {
+  },
+
+  "game.livePlatformEventHandler.thanks" : {
+    "required uInt32 platformId" : 1,
+    "required string eventUid" : 2
+  },
+
+  "game.livePlatformEventHandler.eventSend" : {
+    "required uInt32 platformId" : 1,
+    "required uInt32 cardId" : 2,
+    "required string eventUid" : 3
+  },
+
+  "game.livePlatformEventHandler.discount" : {
+    "required uInt32 platformId" : 1,
+    "required string eventUid" : 2
+  },
+
+  "game.livePlatformEventHandler.choose" : {
+    "required uInt32 platformId" : 1,
+    "required uInt32 choose" : 2,
+    "required string eventUid" : 3
+  },
+
+  "gate.gateHandler.queryServerList" : {
+    "required string account" : 1,
+    "required uInt32 loginType" : 2,
+    "optional string name" : 3,
+    "optional string token" : 4,
+    "optional string ext" : 5,
+    "required string platform" : 6,
+    "required uInt32 agentId" : 7
+  },
+
+  "gate.gateHandler.queryEntry" : {
+    "required string account" : 1,
+    "required uInt32 loginType" : 2,
+    "optional string name" : 3,
+    "optional string token" : 4,
+    "optional string ext" : 5,
+    "required string platform" : 6,
+    "required uInt32 serverId" : 7,
+    "required uInt32 agentId" : 8,
+    "required string deviceId" : 9,
+    "optional string clientVersion" : 10,
+    "optional string clientInfo" : 11,
+    "optional string bgp" : 12
+  },
+
+  "connector.entryHandler.entry" : {
+    "required string token" : 1
+  },
+
+  "game.loginHandler.login" : {
+  },
+
+  "game.playerHandler.createRole" : {
+    "required string name" : 1,
+    "required uInt32 sex" : 2,
+    "required uInt32 skin" : 3,
+    "required uInt32 character" : 4
+  },
+
+  "game.playerHandler.getServerTimeSecond" : {
+  },
+
+  "game.mailHandler.queryMail" : {
+  },
+
+  "game.mailHandler.readMail" : {
+    "repeated int32 id" : 1
+  },
+
+  "game.mailHandler.receiveMail" : {
+    "repeated int32 id" : 1
+  },
+
+  "game.mailHandler.deleteMail" : {
+    "repeated int32 id" : 1
+  },
+
+  "game.missionHandler.getMission" : {
+  },
+
+  "game.missionHandler.completeMission" : {
+    "required uInt32 missionId" : 1
+  },
+
+  "game.missionHandler.receiveLivenessReward" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.missionHandler.receiveAchievementPointsReward" : {
+    "required uInt32 id" : 1
+  },
+
+  "game.operateHandler.query" : {
+  },
+
+  "game.operateHandler.queryFirst" : {
+  },
+
+  "game.operateHandler.fetchFirstPay" : {
+  },
+
+  "game.operateAddUpPayHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateAddUpPayHandler.fetch" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "game.operateDailyPayHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateDailyPayHandler.fetch" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "game.operateDailySignHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateDailySignHandler.signIn" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateDailySignHandler.assistSignIn" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateDaysPayHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateDaysPayHandler.fetch" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "game.operateDiscountHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateDiscountHandler.check" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "game.operateDiscountHandler.fetchPay" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "game.operateDiscountHandler.fetchFree" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "game.operateLuckyTurntableHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateLuckyTurntableHandler.draw" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateSevenDayHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateSevenDayHandler.signIn" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 day" : 2
+  },
+
+  "game.operateTreasureHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateTreasureHandler.draw" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 drawType" : 2
+  },
+
+  "game.operateTreasureHandler.receive" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 index" : 2
+  },
+
+  "game.operateTreasureHandler.buyDrawItem" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 num" : 2
+  },
+
+  "game.operateTreasureHandler.queryDiamondPool" : {
+  },
+
+  "game.operateZeroGiftHandler.queryInfo" : {
+  },
+
+  "game.operateZeroGiftHandler.query" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateZeroGiftHandler.fetchGift" : {
+    "required uInt32 actId" : 1
+  },
+
+  "game.operateZeroGiftHandler.fetchDaily" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 id" : 2
+  },
+
+  "global.queryHandler.queryPlayerInfo" : {
+    "required string uid" : 1
+  },
+
+  "global.rankHandler.getRankInfo" : {
+    "required uInt32 type" : 1,
+    "required uInt32 page" : 2
+  },
+
+  "global.rankHandler.getGuildRankInfo" : {
+    "required uInt32 type" : 1,
+    "required uInt32 page" : 2
+  },
+
+  "global.rankHandler.getTopCarInfo" : {
+    "required string uid" : 1
+  },
+
+  "game.rankHandler.getRankWorshipInfo" : {
+  },
+
+  "game.rankHandler.rankWorship" : {
+    "required uInt32 mainType" : 1,
+    "required uInt32 secondType" : 2
+  },
+
+  "game.recoveryHandler.recoveryGetInfo" : {
+    "required uInt32 id" : 1
+  },
+
+  "global.announcementHandler.getPostInfo" : {
+  },
+
+  "game.settingsHandler.giftCode" : {
+    "required string code" : 1
+  },
+
+  "game.settingsHandler.feedBack" : {
+    "required uInt32 type" : 1,
+    "required string msg" : 2
+  },
+
+  "game.shopHandler.query" : {
+  },
+
+  "game.shopHandler.buyDirectSale" : {
+    "required uInt32 shopId" : 1,
+    "required uInt32 goodsId" : 2,
+    "required uInt32 num" : 3
+  },
+
+  "game.shopHandler.buyMystery" : {
+    "required uInt32 shopId" : 1,
+    "required string goodsUid" : 2
+  },
+
+  "game.shopHandler.refreshFree" : {
+    "required uInt32 shopId" : 1
+  },
+
+  "game.shopHandler.refreshPay" : {
+    "required uInt32 shopId" : 1
+  },
+
+  "game.shopTemporaryHandler.query" : {
+    "required string shopUid" : 1
+  },
+
+  "game.shopTemporaryHandler.buy" : {
+    "required string shopUid" : 1,
+    "required string goodsUid" : 2
+  },
+
+  "game.specialDeliveryHandler.getInfo" : {
+  },
+
+  "game.specialDeliveryHandler.receive" : {
+    "required uInt32 index" : 1
+  },
+
+  "game.specialDeliveryHandler.assistReceive" : {
+    "required uInt32 index" : 1
+  },
+
+  "game.vipHandler.query" : {
+  },
+
+  "game.vipHandler.receivePrivilegeGift" : {
+    "required uInt32 vipLv" : 1
+  }
+}

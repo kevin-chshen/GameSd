@@ -1,0 +1,82 @@
+{
+    "1": {
+        "action_type_id": 1,
+        "action_type_name": "功能参与度字典"
+    },
+    "2": {
+        "action_type_id": 2,
+        "action_type_name": "物品商城购买字典"
+    },
+    "3": {
+        "action_type_id": 3,
+        "action_type_name": "道具产出与消耗字典"
+    },
+    "4": {
+        "action_type_id": 4,
+        "action_type_name": "货币变动字典"
+    },
+    "5": {
+        "action_type_id": 5,
+        "action_type_name": "副本字典"
+    },
+    "6": {
+        "action_type_id": 6,
+        "action_type_name": "道具流通字典(忽略，暂时与3冲突)"
+    },
+    "7": {
+        "action_type_id": 7,
+        "action_type_name": "地图字典"
+    },
+    "8": {
+        "action_type_id": 8,
+        "action_type_name": "事件字典"
+    },
+    "9": {
+        "action_type_id": 9,
+        "action_type_name": "活动字典"
+    },
+    "10": {
+        "action_type_id": 10,
+        "action_type_name": "战场字典"
+    },
+    "11": {
+        "action_type_id": 11,
+        "action_type_name": "战斗技能字典"
+    },
+    "12": {
+        "action_type_id": 12,
+        "action_type_name": "玩家竞技字典"
+    },
+    "13": {
+        "action_type_id": 13,
+        "action_type_name": "福利字典"
+    },
+    "14": {
+        "action_type_id": 14,
+        "action_type_name": "聊天频道字典"
+    },
+    "15": {
+        "action_type_id": 15,
+        "action_type_name": "SLG士兵字典"
+    },
+    "1500": {
+        "action_type_id": 1500,
+        "action_type_name": "任务字典（1501可以代表主线任务，1502代表支线任务，以此类推）"
+    },
+    "1501": {
+        "action_type_id": 1501,
+        "action_type_name": "任务字典（1501代表主线任务）"
+    },
+    "1502": {
+        "action_type_id": 1502,
+        "action_type_name": "任务字典（1502代表每日任务）"
+    },
+    "1503": {
+        "action_type_id": 1503,
+        "action_type_name": "任务字典（1503代表成就任务）"
+    },
+    "5100": {
+        "action_type_id": 5100,
+        "action_type_name": "非运营活动字典"
+    }
+}

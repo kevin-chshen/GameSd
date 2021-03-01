@@ -1,0 +1,23 @@
+{
+  "name": "dzb_server",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "bearcat": "0.4.29",
+    "md5": "2.2.1",
+    "module-alias": "2.2.2",
+    "mongodb": "3.5.4",
+    "mysql2": "2.1.0",
+    "pomelo": "2.2.7",
+    "pomelo-sync-plugin": "0.0.2",
+    "protobufjs": "6.8.8",
+    "redis": "3.0.2",
+    "sequelize": "5.21.5"
+  },
+  "_moduleAliases": {
+    "@root": "app",
+    "@code": "app/constant/code",
+    "@util": "app/lib/util",
+    "@mongo": "app/dao/mongo"
+  }
+}

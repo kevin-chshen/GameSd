@@ -1,0 +1,2033 @@
+{
+  "message activityInfo" : {
+    "required uInt32 id" : 1,
+    "required uInt32 startMs" : 2,
+    "required uInt32 stopMs" : 3
+  },
+
+  "message monthCardInfo" : {
+    "required uInt32 cardId" : 1,
+    "required uInt32 remainDay" : 2,
+    "required uInt32 isTodayFetch" : 3
+  },
+
+  "message award" : {
+    "required uInt32 itemID" : 1,
+    "required string itemNum" : 2
+  },
+
+  "message attribute" : {
+    "optional uInt32 hpMin" : 1,
+    "optional uInt32 hpMax" : 2,
+    "optional uInt32 attackMin" : 3,
+    "optional uInt32 attackMax" : 4,
+    "optional uInt32 popularity" : 5,
+    "optional uInt32 hpMinPro" : 6,
+    "optional uInt32 hpMaxPro" : 7,
+    "optional uInt32 attackMinPro" : 8,
+    "optional uInt32 attackMaxPro" : 9
+  },
+
+  "message autoShowCardInfo" : {
+    "required uInt32 cardId" : 1,
+    "required uInt32 level" : 2,
+    "required uInt32 star" : 3,
+    "required uInt32 power" : 4,
+    "required attribute attrs" : 5
+  },
+
+  "message autoShowBattleRecord" : {
+    "required string uid" : 1,
+    "required string name" : 2,
+    "required uInt32 isWin" : 3,
+    "required uInt32 time" : 4
+  },
+
+  "message autoShowItemInfo" : {
+    "required string uid" : 1,
+    "required uInt32 type" : 2,
+    "required string playerName" : 3,
+    "required uInt32 rewardTypeIndex" : 4,
+    "required uInt32 startTime" : 5,
+    "required uInt32 beAttackedTimes" : 6,
+    "repeated autoShowCardInfo cardInfo" : 7,
+    "repeated autoShowBattleRecord battleRecord" : 8,
+    "required uInt32 isBot" : 9,
+    "optional uInt32 hasRobbed" : 10,
+    "optional uInt32 targetLevel" : 11
+  },
+
+  "message autoShowRecoveryInfo" : {
+    "required uInt32 cardId" : 1,
+    "required uInt32 useNum" : 2,
+    "optional uInt32 remainTime" : 3
+  },
+
+  "message kv" : {
+    "required string k" : 1,
+    "required uInt32 v" : 2
+  },
+
+  "message backpackItemInfo" : {
+    "required uInt32 itemID" : 1,
+    "required uInt32 itemNum" : 2,
+    "optional uInt32 endTime" : 3
+  },
+
+  "message battleCardInfo" : {
+    "required uInt32 id" : 1,
+    "required uInt32 hp" : 2,
+    "required uInt32 atk" : 3
+  },
+
+  "message battleStatus" : {
+    "required uInt32 attacker" : 1,
+    "required uInt32 playerSkill" : 2,
+    "repeated uInt32 playerSkillEffectSelfIds" : 3,
+    "repeated uInt32 playerSkillEffectOtherIds" : 4,
+    "required uInt32 enemySkill" : 5,
+    "repeated uInt32 enemySkillEffectSelfIds" : 6,
+    "repeated uInt32 enemySkillEffectOtherIds" : 7,
+    "repeated battleCardInfo playerCardInfo" : 8,
+    "repeated battleCardInfo enemyCardInfo" : 9
+  },
+
+  "message battleRecord" : {
+    "required uInt32 battleType" : 1,
+    "required string playerName" : 2,
+    "required string enemyName" : 3,
+    "repeated battleCardInfo playerCardInfo" : 4,
+    "repeated battleCardInfo enemyCardInfo" : 5,
+    "repeated battleStatus roundRecord" : 6,
+    "required string win" : 7,
+    "repeated award award" : 8,
+    "repeated battleCardInfo playerMaxArray" : 9,
+    "repeated battleCardInfo enemyMaxArray" : 10,
+    "repeated string clientParams" : 11
+  },
+
+  "message refitInfo" : {
+    "required uInt32 part" : 1,
+    "required uInt32 id" : 2,
+    "required uInt32 index" : 3
+  },
+
+  "message carInfo" : {
+    "required uInt32 carId" : 1,
+    "required uInt32 cId" : 2,
+    "required uInt32 level" : 3,
+    "repeated refitInfo refitList" : 4,
+    "required uInt32 cardId" : 5,
+    "required uInt32 power" : 6
+  },
+
+  "message cardInfo" : {
+    "required uInt32 cardId" : 1,
+    "required uInt32 level" : 2,
+    "required uInt32 stage" : 3,
+    "required uInt32 point" : 4,
+    "required uInt32 failCount" : 5,
+    "required uInt32 star" : 6,
+    "required attribute attrs" : 7,
+    "required uInt32 power" : 8,
+    "required uInt32 formation" : 9,
+    "required uInt32 carId" : 10
+  },
+
+  "message roleChatBase" : {
+    "required string uid" : 1,
+    "required string name" : 2,
+    "required uInt32 vipLv" : 3,
+    "required uInt32 headId" : 4,
+    "required int32 status" : 5,
+    "optional uInt32 lastLogoutTime" : 6,
+    "optional uInt32 isBanChat" : 7
+  },
+
+  "message roleMsg" : {
+    "optional string id" : 1,
+    "required uInt32 msgType" : 2,
+    "required uInt32 channelId" : 3,
+    "optional string text" : 4,
+    "optional string voice" : 5,
+    "optional uInt32 templateId" : 6,
+    "optional uInt32 voiceTime" : 7,
+    "optional uInt32 time" : 8,
+    "optional string targetUid" : 9,
+    "repeated string param" : 10,
+    "optional roleChatBase sender" : 11
+  },
+
+  "message clubCard" : {
+    "required uInt32 id" : 1,
+    "required uInt32 intimacy" : 2,
+    "repeated uInt32 intimacyReward" : 3,
+    "required uInt32 giftNum" : 4,
+    "optional uInt32 buyResetNum" : 5,
+    "optional uInt32 isMake" : 6
+  },
+
+  "message clubInfo" : {
+    "required uInt32 clubType" : 1,
+    "required uInt32 lv" : 2,
+    "required uInt32 exp" : 3,
+    "repeated clubCard clubCardList" : 4
+  },
+
+  "message recoveryInfo" : {
+    "optional uInt32 id" : 1,
+    "optional uInt32 num" : 2,
+    "optional uInt32 remainTime" : 3,
+    "optional uInt32 nextTime" : 4
+  },
+
+  "message postcardInfo" : {
+    "optional recoveryInfo recoveryInfo" : 1,
+    "optional uInt32 buyNum" : 2
+  },
+
+  "message currencyInfo" : {
+    "required uInt32 id" : 1,
+    "required uInt32 num" : 2
+  },
+
+  "message bigCurrencyInfo" : {
+    "required uInt32 id" : 1,
+    "required string num" : 2
+  },
+
+  "message flowRateInfo" : {
+    "optional uInt32 rank" : 1,
+    "optional uInt32 robot" : 2,
+    "optional string uid" : 3,
+    "optional string name" : 4,
+    "optional uInt32 head" : 5,
+    "optional uInt32 power" : 6,
+    "optional uInt32 vip" : 7
+  },
+
+  "message flowRateRecordInfo" : {
+    "optional uInt32 type" : 1,
+    "optional uInt32 rank" : 2,
+    "optional sInt32 changeRank" : 3,
+    "optional string name" : 4,
+    "optional uInt32 head" : 5,
+    "optional string battleId" : 6,
+    "optional uInt32 time" : 7,
+    "optional string uid" : 8
+  },
+
+  "message FriendInfo" : {
+    "required string uid" : 1,
+    "required uInt32 lv" : 2,
+    "required uInt32 vip" : 3,
+    "required string name" : 4,
+    "required uInt32 power" : 5,
+    "optional string guild" : 6,
+    "required uInt32 lastOnlineTime" : 7,
+    "required uInt32 sex" : 8
+  },
+
+  "message FriendshipShopId" : {
+    "required uInt32 stair" : 1,
+    "required uInt32 index" : 2,
+    "required string shopId" : 3
+  },
+
+  "message FriendshipNodeInfo" : {
+    "required uInt32 ID" : 1,
+    "required uInt32 stair" : 2,
+    "required uInt32 index" : 3,
+    "required uInt32 status" : 4,
+    "repeated uInt32 buffList" : 5,
+    "repeated uInt32 path" : 6,
+    "required uInt32 buyBuffTimes" : 7,
+    "repeated FriendshipShopId shopInfo" : 8
+  },
+
+  "message kv2" : {
+    "required uInt32 k" : 1,
+    "required uInt32 v" : 2
+  },
+
+  "message InvestInfo" : {
+    "required string id" : 1,
+    "required uInt32 investID" : 2,
+    "required uInt32 color" : 3
+  },
+
+  "message CompleteInvestInfo" : {
+    "required uInt32 investID" : 1,
+    "required uInt32 times" : 2
+  },
+
+  "message ProjectInfo" : {
+    "required string id" : 1,
+    "required uInt32 investID" : 2,
+    "required uInt32 color" : 3,
+    "required string playerUid" : 4,
+    "required string playerName" : 5,
+    "required uInt32 playerLevel" : 6,
+    "required string name" : 7,
+    "repeated uInt32 tags" : 8,
+    "optional uInt32 finishType" : 9,
+    "optional uInt32 isBot" : 10
+  },
+
+  "message CooperateProjectInfo" : {
+    "required ProjectInfo self" : 1,
+    "optional ProjectInfo cooperate" : 2
+  },
+
+  "message CurrentInvestInfo" : {
+    "required string id" : 1,
+    "required uInt32 investID" : 2,
+    "required uInt32 color" : 3,
+    "required string progress" : 4
+  },
+
+  "message leagueInfo" : {
+    "optional uInt32 leagueId" : 1,
+    "optional string name" : 2,
+    "optional string badge" : 3,
+    "optional string manifesto" : 4,
+    "optional string notice" : 5,
+    "optional uInt32 lv" : 6,
+    "optional uInt32 exp" : 7,
+    "optional uInt32 joinType" : 8,
+    "optional uInt32 totalPower" : 9,
+    "optional uInt32 isApply" : 10,
+    "optional string champions" : 11,
+    "optional uInt32 num" : 12,
+    "optional uInt32 maxNum" : 13
+  },
+
+  "message roleInfo" : {
+    "optional string uid" : 1,
+    "optional string name" : 2,
+    "optional uInt32 lv" : 3,
+    "optional uInt32 vip" : 4,
+    "optional uInt32 head" : 5,
+    "optional uInt32 sex" : 6,
+    "optional uInt32 power" : 7,
+    "optional uInt32 isOnline" : 8
+  },
+
+  "message leagueMember" : {
+    "optional string uid" : 1,
+    "optional uInt32 job" : 2,
+    "optional uInt32 contribute" : 3,
+    "optional roleInfo roleInfo" : 4,
+    "optional uInt32 leagueContribute" : 5
+  },
+
+  "message leagueApply" : {
+    "optional string uid" : 1,
+    "optional uInt32 time" : 2,
+    "optional roleInfo roleInfo" : 3
+  },
+
+  "message leagueBuildInfo" : {
+    "optional uInt32 id" : 1,
+    "optional uInt32 num" : 2,
+    "optional uInt32 time" : 3
+  },
+
+  "message leagueBuildRecord" : {
+    "optional uInt32 time" : 1,
+    "optional string uid" : 2,
+    "optional string name" : 3,
+    "optional uInt32 id" : 4,
+    "repeated award awardList" : 5
+  },
+
+  "message leagueTechnology" : {
+    "optional uInt32 skillId" : 1,
+    "optional uInt32 level" : 2
+  },
+
+  "message arrangementInfo" : {
+    "required uInt32 id" : 1,
+    "optional uInt32 type" : 2,
+    "optional uInt32 endTime" : 3,
+    "optional uInt32 donation" : 4
+  },
+
+  "message negotiateInfo" : {
+    "required uInt32 id" : 1,
+    "optional uInt32 type" : 2,
+    "optional uInt32 endTime" : 3,
+    "optional string curHp" : 4,
+    "optional string maxHp" : 5
+  },
+
+  "message accreditInfo" : {
+    "optional string uid" : 1,
+    "optional string name" : 2,
+    "optional uInt32 pos" : 3,
+    "optional uInt32 cardId" : 4,
+    "optional uInt32 time" : 5
+  },
+
+  "message operationInfo" : {
+    "required uInt32 id" : 1,
+    "optional uInt32 type" : 2,
+    "optional uInt32 endTime" : 3,
+    "optional uInt32 career" : 4,
+    "optional uInt32 sex" : 5,
+    "repeated accreditInfo accreditList" : 6
+  },
+
+  "message donationRankInfo" : {
+    "optional string uid" : 1,
+    "optional uInt32 donation" : 2,
+    "optional uInt32 time" : 3,
+    "optional roleInfo roleInfo" : 4
+  },
+
+  "message damageRankInfo" : {
+    "optional string uid" : 1,
+    "optional uInt32 damage" : 2,
+    "optional uInt32 time" : 3,
+    "optional roleInfo roleInfo" : 4
+  },
+
+  "message livePlatformCards" : {
+    "required uInt32 cardId" : 1,
+    "required uInt32 slot" : 2,
+    "optional uInt32 platformId" : 3
+  },
+
+  "message livePlatformInfo" : {
+    "required uInt32 platform" : 1,
+    "required uInt32 level" : 2,
+    "required uInt32 numStaffs" : 3,
+    "repeated livePlatformCards cards" : 4,
+    "required string earnPerSecond" : 5
+  },
+
+  "message livePlatformEventInfo" : {
+    "required string eventUid" : 1,
+    "required uInt32 platformId" : 2,
+    "required uInt32 type" : 3,
+    "required uInt32 id" : 4,
+    "optional uInt32 endTime" : 5
+  },
+
+  "message roleBase" : {
+    "required string uid" : 1,
+    "required string name" : 2,
+    "required uInt32 sex" : 3,
+    "required uInt32 level" : 4,
+    "required string power" : 5,
+    "required uInt32 roleHeadIcon" : 6,
+    "required string saveCashPreSecond" : 7,
+    "required string cashMoney" : 8,
+    "repeated uInt32 moneyArr" : 9,
+    "required uInt32 vipLv" : 10,
+    "required uInt32 vipExp" : 11
+  },
+
+  "message roleMail" : {
+    "required int32 id" : 1,
+    "required string title" : 2,
+    "required string content" : 3,
+    "repeated award item" : 4,
+    "required int32 type" : 5,
+    "required uInt32 sendTime" : 6,
+    "required uInt32 expirationTime" : 7,
+    "required int32 status" : 8
+  },
+
+  "message missionInfo" : {
+    "required uInt32 missionId" : 1,
+    "required string progress" : 2,
+    "required string totalProgress" : 3,
+    "optional uInt32 preMission" : 4
+  },
+
+  "message operateInfo" : {
+    "required uInt32 id" : 1,
+    "required uInt32 startMs" : 2,
+    "required uInt32 stopMs" : 3
+  },
+
+  "message OperateTreasureDrawInfo" : {
+    "required string name" : 1,
+    "required award award" : 2
+  },
+
+  "message PlayerBriefInfo" : {
+    "required string uid" : 1,
+    "required uInt32 lv" : 2,
+    "required uInt32 sex" : 3,
+    "required uInt32 vip" : 4,
+    "required string name" : 5,
+    "required string manifesto" : 6,
+    "required uInt32 power" : 7,
+    "optional string guild" : 8,
+    "required uInt32 lastOnlineTime" : 9,
+    "required uInt32 skin" : 10
+  },
+
+  "message RankInfo" : {
+    "required uInt32 rank" : 1,
+    "required string uid" : 2,
+    "optional string score" : 3,
+    "required uInt32 level" : 4,
+    "required string name" : 5,
+    "required uInt32 vip" : 6,
+    "optional string guildName" : 7,
+    "optional uInt32 isRobot" : 8,
+    "required uInt32 roleId" : 9
+  },
+
+  "message GuildRankInfo" : {
+    "required uInt32 rank" : 1,
+    "required string score" : 2,
+    "required uInt32 level" : 3,
+    "required string name" : 4,
+    "required string badge" : 5,
+    "required string champions" : 6,
+    "required uInt32 roleId" : 7
+  },
+
+  "message rankTopCarInfo" : {
+    "required uInt32 rank" : 1,
+    "required uInt32 id" : 2,
+    "required string power" : 3
+  },
+
+  "message settingsPostInfo" : {
+    "required string title" : 1,
+    "required string content" : 2,
+    "required uInt32 isHot" : 3
+  },
+
+  "message shopMystery" : {
+    "required uInt32 shopId" : 1,
+    "required uInt32 remainFreeCount" : 2,
+    "required uInt32 remainPayCount" : 3,
+    "repeated string buyUids" : 4,
+    "repeated kv showGoods" : 5,
+    "required uInt32 nextRefreshTime" : 6
+  },
+
+  "message temporaryShopDetail" : {
+    "required string shopUid" : 1,
+    "required uInt32 shopId" : 2,
+    "repeated kv goods" : 3,
+    "repeated string buyUids" : 4
+  },
+
+  "onSyncInvestFundsNotify" : {
+    "required uInt32 count" : 1
+  },
+
+  "game.actInvestFundsHandler.query" : {
+    "required uInt32 count" : 1,
+    "required uInt32 buyInvest" : 2,
+    "repeated uInt32 fetches" : 3
+  },
+
+  "game.actInvestFundsHandler.buy" : {
+    "required uInt32 code" : 1
+  },
+
+  "game.actInvestFundsHandler.fetch" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 id" : 2
+  },
+
+  "onSyncActivityStartNotify" : {
+    "required activityInfo info" : 1
+  },
+
+  "onSyncActivityStopNotify" : {
+    "required activityInfo info" : 1
+  },
+
+  "game.activityHandler.query" : {
+    "repeated activityInfo infos" : 1
+  },
+
+  "game.actMonthCardHandler.query" : {
+    "required uInt32 code" : 1,
+    "repeated monthCardInfo cards" : 2
+  },
+
+  "onSyncActMonthCardNotify" : {
+    "required monthCardInfo info" : 1,
+    "repeated award award" : 2
+  },
+
+  "game.actMonthCardHandler.buy" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 cardId" : 2
+  },
+
+  "game.actMonthCardHandler.fetch" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 cardId" : 2,
+    "repeated award award" : 3,
+    "optional uInt32 remain" : 4
+  },
+
+  "game.autoShowHandler.getInfo" : {
+    "repeated autoShowItemInfo infoList" : 1,
+    "required uInt32 maxCardPower" : 2,
+    "required uInt32 robBuffTimes" : 3,
+    "repeated autoShowRecoveryInfo recoveryInfo" : 4
+  },
+
+  "game.autoShowHandler.start" : {
+    "required uInt32 code" : 1,
+    "optional autoShowItemInfo itemInfo" : 2
+  },
+
+  "game.autoShowHandler.end" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 type" : 2,
+    "repeated award award" : 3
+  },
+
+  "game.autoShowHandler.rob" : {
+    "required uInt32 code" : 1,
+    "optional string targetUid" : 2,
+    "optional uInt32 type" : 3,
+    "optional uInt32 hasRobbed" : 4,
+    "optional uInt32 robBuffTimes" : 5,
+    "repeated autoShowRecoveryInfo recoveryInfo" : 6
+  },
+
+  "game.autoShowHandler.buyBuff" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 robBuffTimes" : 2
+  },
+
+  "game.autoShowHandler.recommend" : {
+    "required uInt32 code" : 1,
+    "repeated autoShowItemInfo recommendList" : 2,
+    "optional uInt32 startTime" : 3
+  },
+
+  "onNotifyAutoShowCardMaxPower" : {
+    "required uInt32 maxCardPower" : 1
+  },
+
+  "onNotifyAutoShowCardRecoveryInfo" : {
+    "repeated autoShowRecoveryInfo info" : 1
+  },
+
+  "onNotifyAutoShowClear" : {
+    "repeated kv infoList" : 1
+  },
+
+  "game.autoShowHandler.addRobTimes" : {
+    "required uInt32 code" : 1,
+    "repeated autoShowRecoveryInfo recoveryInfo" : 2
+  },
+
+  "onNotifyAutoShowBeRobbed" : {
+    "required string uid" : 1,
+    "required uInt32 type" : 2,
+    "required uInt32 beAttackedTimes" : 3,
+    "required autoShowBattleRecord newBattleRecord" : 4
+  },
+
+  "game.itemHandler.getBackpackItemInfo" : {
+    "repeated backpackItemInfo itemInfo" : 1
+  },
+
+  "game.itemHandler.sellBackpackItem" : {
+    "required uInt32 code" : 1,
+    "repeated award itemInfo" : 2
+  },
+
+  "game.itemHandler.sellBatchBackpackItem" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2
+  },
+
+  "game.itemHandler.useBackpackItem" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2
+  },
+
+  "game.itemHandler.composeBackpackItem" : {
+    "required uInt32 code" : 1,
+    "repeated award itemInfo" : 2
+  },
+
+  "onBackpackItemDataNotify" : {
+    "repeated backpackItemInfo itemInfo" : 1
+  },
+
+  "game.itemHandler.useOptionalGift" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2
+  },
+
+  "onNotifyStatusBattle" : {
+    "required battleRecord battleRecord" : 1
+  },
+
+  "battle.battleHandler.getBattleRecord" : {
+    "required uInt32 code" : 1,
+    "optional battleRecord battleRecord" : 2
+  },
+
+  "game.carHandler.carGetInfo" : {
+    "required uInt32 code" : 1,
+    "repeated carInfo carList" : 2
+  },
+
+  "game.carHandler.carEquip" : {
+    "required uInt32 code" : 1,
+    "repeated carInfo carList" : 2
+  },
+
+  "game.carHandler.carUpgrade" : {
+    "required uInt32 code" : 1,
+    "optional carInfo carInfo" : 2
+  },
+
+  "game.carHandler.carRefit" : {
+    "required uInt32 code" : 1,
+    "optional carInfo carInfo" : 2
+  },
+
+  "game.carHandler.carReset" : {
+    "required uInt32 code" : 1,
+    "optional carInfo carInfo" : 2
+  },
+
+  "game.carHandler.carSell" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 sellList" : 2
+  },
+
+  "game.carHandler.carCompound" : {
+    "required uInt32 code" : 1,
+    "optional award composeInfo" : 2
+  },
+
+  "game.carHandler.carQuickCompound" : {
+    "required uInt32 code" : 1,
+    "repeated award composeList" : 2
+  },
+
+  "game.carHandler.carNew" : {
+    "required uInt32 code" : 1,
+    "optional carInfo carInfo" : 2
+  },
+
+  "onCarInfoNotify" : {
+    "repeated carInfo carList" : 1,
+    "repeated uInt32 delList" : 2
+  },
+
+  "game.cardHandler.cardGetInfo" : {
+    "required uInt32 code" : 1,
+    "repeated cardInfo cardList" : 2
+  },
+
+  "game.cardHandler.cardFormation" : {
+    "required uInt32 code" : 1,
+    "repeated cardInfo cardList" : 2
+  },
+
+  "game.cardHandler.cardUpgrade" : {
+    "required uInt32 code" : 1,
+    "optional cardInfo cardInfo" : 2
+  },
+
+  "game.cardHandler.cardStage" : {
+    "required uInt32 code" : 1,
+    "optional cardInfo cardInfo" : 2,
+    "optional uInt32 isSuccess" : 3
+  },
+
+  "game.cardHandler.cardStar" : {
+    "required uInt32 code" : 1,
+    "optional cardInfo cardInfo" : 2
+  },
+
+  "game.cardHandler.cardReset" : {
+    "required uInt32 code" : 1,
+    "optional cardInfo cardInfo" : 2
+  },
+
+  "game.cardHandler.cardActive" : {
+    "required uInt32 code" : 1,
+    "optional cardInfo cardInfo" : 2
+  },
+
+  "game.cardHandler.cardNew" : {
+    "required uInt32 code" : 1,
+    "optional cardInfo cardInfo" : 2
+  },
+
+  "onPowerNotify" : {
+    "required string power" : 1,
+    "required string changePower" : 2,
+    "required uInt32 isAdd" : 3
+  },
+
+  "onCardInfoNotify" : {
+    "repeated cardInfo cardList" : 1
+  },
+
+  "onCardResolveNotify" : {
+    "required uInt32 cardId" : 1,
+    "repeated award awardList" : 2
+  },
+
+  "game.chatHandler.chat" : {
+    "required uInt32 code" : 1
+  },
+
+  "chatNotify" : {
+    "required roleMsg msg" : 1
+  },
+
+  "chatSelfNotify" : {
+    "required roleMsg msg" : 1
+  },
+
+  "game.chatHandler.queryOfflineChat" : {
+    "required uInt32 code" : 1,
+    "repeated roleMsg msgList" : 2
+  },
+
+  "game.chatHandler.queryOnline" : {
+    "repeated roleChatBase list" : 1
+  },
+
+  "game.clubHandler.clubGetInfo" : {
+    "required uInt32 code" : 1,
+    "repeated clubInfo clubList" : 2
+  },
+
+  "game.clubHandler.clubPostcardTime" : {
+    "required uInt32 code" : 1,
+    "optional postcardInfo postcardInfo" : 2
+  },
+
+  "game.clubHandler.clubUpgrade" : {
+    "required uInt32 code" : 1,
+    "optional clubInfo clubInfo" : 2
+  },
+
+  "game.clubHandler.clubMake" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 id" : 2,
+    "optional clubCard clubCard" : 3
+  },
+
+  "game.clubHandler.clubGift" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 id" : 2,
+    "optional clubCard clubCard" : 3
+  },
+
+  "game.clubHandler.clubIntimacyReward" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 id" : 2,
+    "repeated uInt32 intimacyReward" : 3
+  },
+
+  "game.clubHandler.clubReset" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 id" : 2,
+    "optional uInt32 giftNum" : 3,
+    "optional uInt32 buyResetNum" : 4
+  },
+
+  "game.clubHandler.clubPostcard" : {
+    "required uInt32 code" : 1,
+    "optional postcardInfo postcardInfo" : 2
+  },
+
+  "onClubGetInfoNotify" : {
+    "repeated clubInfo clubList" : 1
+  },
+
+  "onCurrencyDataNotify" : {
+    "repeated currencyInfo currencyInfo" : 1,
+    "repeated bigCurrencyInfo bigCurrencyInfo" : 2
+  },
+
+  "game.dungeonHandler.getDungeonInfo" : {
+    "required uInt32 matchID" : 1,
+    "required uInt32 progress" : 2,
+    "repeated uInt32 hasReceiveBoxID" : 3,
+    "required uInt32 eventID" : 4
+  },
+
+  "game.dungeonHandler.encourageDungeon" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 curMatchID" : 2,
+    "optional uInt32 matchID" : 3,
+    "optional uInt32 progress" : 4,
+    "optional uInt32 eventID" : 5,
+    "repeated award award" : 6,
+    "repeated award nodeAward" : 7,
+    "optional uInt32 times" : 8
+  },
+
+  "game.dungeonHandler.chooseEventDungeon" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 para" : 2,
+    "optional uInt32 success" : 3,
+    "repeated award award" : 4,
+    "repeated uInt32 indexList" : 5,
+    "optional uInt32 matchID" : 6,
+    "optional uInt32 progress" : 7,
+    "optional uInt32 eventID" : 8
+  },
+
+  "game.dungeonHandler.receiveBoxRewardDungeon" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 hasReceiveBoxID" : 2,
+    "repeated award award" : 3
+  },
+
+  "game.dungeonHandler.enterBattle" : {
+    "required uInt32 code" : 1
+  },
+
+  "onNotifyBattleResultDungeon" : {
+    "required uInt32 matchID" : 1,
+    "required uInt32 progress" : 2
+  },
+
+  "game.fameHandler.fameGetInfo" : {
+    "required uInt32 code" : 1,
+    "required uInt32 isGetDaily" : 2,
+    "required string manifesto" : 3
+  },
+
+  "game.fameHandler.fameUpgrade" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 isGetDaily" : 2
+  },
+
+  "game.fameHandler.getDailyReward" : {
+    "required uInt32 code" : 1
+  },
+
+  "game.fameHandler.rename" : {
+    "required uInt32 code" : 1
+  },
+
+  "game.fameHandler.alterManifesto" : {
+    "required uInt32 code" : 1
+  },
+
+  "onFameUpgrade" : {
+    "repeated uInt32 lvList" : 1
+  },
+
+  "global.flowRateHandler.flowRateGetInfo" : {
+    "required uInt32 code" : 1,
+    "repeated flowRateInfo flowRateList" : 2,
+    "optional uInt32 offlineTime" : 3,
+    "optional uInt32 buyNum" : 4,
+    "required uInt32 nextTime" : 5
+  },
+
+  "global.flowRateHandler.flowRateChallenge" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.flowRateHandler.flowRateSweep" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.flowRateHandler.flowRateOfflineReward" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 offlineTime" : 2,
+    "repeated award awardList" : 3
+  },
+
+  "global.flowRateHandler.flowRateBattleRecord" : {
+    "required uInt32 code" : 1,
+    "repeated flowRateRecordInfo recordList" : 2
+  },
+
+  "global.flowRateHandler.flowRateBuy" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 buyNum" : 2
+  },
+
+  "onFlowRateInfoNotify" : {
+    "repeated flowRateInfo flowRateList" : 1,
+    "optional uInt32 offlineTime" : 2
+  },
+
+  "global.friendHandler.searchFriend" : {
+    "required uInt32 code" : 1,
+    "repeated FriendInfo result" : 2
+  },
+
+  "global.friendHandler.recommendFriend" : {
+    "repeated FriendInfo result" : 1
+  },
+
+  "global.friendHandler.getFriendList" : {
+    "repeated FriendInfo friendList" : 1,
+    "repeated FriendInfo applyList" : 2,
+    "repeated FriendInfo blackList" : 3
+  },
+
+  "global.friendHandler.applyFriend" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.friendHandler.acceptApplyFriend" : {
+    "required uInt32 code" : 1,
+    "repeated FriendInfo newFriendInfo" : 2
+  },
+
+  "global.friendHandler.denyApplyFriend" : {
+    "required uInt32 code" : 1,
+    "repeated string uid" : 2
+  },
+
+  "global.friendHandler.deleteFriend" : {
+    "required uInt32 code" : 1,
+    "repeated string uid" : 2
+  },
+
+  "global.friendHandler.block" : {
+    "required uInt32 code" : 1,
+    "optional FriendInfo newBlockInfo" : 2
+  },
+
+  "global.friendHandler.unBlock" : {
+    "required uInt32 code" : 1,
+    "optional string uid" : 2
+  },
+
+  "OnNotifyApplyFriend" : {
+    "required FriendInfo friendInfo" : 1
+  },
+
+  "OnNotifyCancelApplyFriend" : {
+    "required string uid" : 1
+  },
+
+  "OnNotifyAddFriend" : {
+    "required FriendInfo friendInfo" : 1
+  },
+
+  "OnNotifyDeleteFriend" : {
+    "required string uid" : 1
+  },
+
+  "game.friendshipHandler.getFriendshipInfo" : {
+    "required uInt32 isStart" : 1,
+    "optional FriendshipNodeInfo nodeInfo" : 2,
+    "required uInt32 referencePower" : 3,
+    "required uInt32 buyTimes" : 4,
+    "required uInt32 expireTime" : 5
+  },
+
+  "OnNotifyReferencePowerFriendship" : {
+    "required uInt32 referencePower" : 1
+  },
+
+  "game.friendshipHandler.start" : {
+    "required uInt32 code" : 1,
+    "optional FriendshipNodeInfo nodeInfo" : 2,
+    "optional uInt32 isStart" : 3
+  },
+
+  "OnNotifyTimesFriendship" : {
+    "required uInt32 buyTimes" : 1
+  },
+
+  "game.friendshipHandler.moveAction" : {
+    "required uInt32 code" : 1,
+    "optional FriendshipNodeInfo nodeInfo" : 2
+  },
+
+  "game.friendshipHandler.retryBattle" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 status" : 2
+  },
+
+  "game.friendshipHandler.getSelectBuff" : {
+    "repeated uInt32 list" : 1
+  },
+
+  "game.friendshipHandler.selectBuff" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 buffID" : 2,
+    "repeated uInt32 buffList" : 3,
+    "optional uInt32 status" : 4
+  },
+
+  "game.friendshipHandler.finishShopping" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 status" : 2
+  },
+
+  "game.friendshipHandler.receiveStageReward" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2,
+    "optional uInt32 status" : 3
+  },
+
+  "game.friendshipHandler.enterNextStage" : {
+    "required uInt32 code" : 1,
+    "optional FriendshipNodeInfo nodeInfo" : 2
+  },
+
+  "game.friendshipHandler.finish" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 isStart" : 2
+  },
+
+  "game.friendshipHandler.buyBuff" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 buyBuffTimes" : 2,
+    "repeated uInt32 buffList" : 3
+  },
+
+  "game.friendshipHandler.buyTimes" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 buyTimes" : 2
+  },
+
+  "game.gmHandler.executeCommand" : {
+    "required uInt32 code" : 1,
+    "optional string tip" : 2
+  },
+
+  "game.gmHandler.getCommand" : {
+    "repeated string cmdList" : 1
+  },
+
+  "game.guideHandler.getInfo" : {
+    "repeated kv2 guideInfo" : 1
+  },
+
+  "game.guideHandler.set" : {
+    "required uInt32 code" : 1,
+    "optional kv2 updateKv" : 2
+  },
+
+  "game.investHandler.getInvestInfo" : {
+    "repeated InvestInfo investList" : 1,
+    "repeated CompleteInvestInfo completeInfo" : 2,
+    "repeated CooperateProjectInfo projectInfo" : 3,
+    "optional CurrentInvestInfo current" : 4,
+    "required recoveryInfo recoveryInfo" : 5,
+    "required uInt32 isFirstTime" : 6
+  },
+
+  "game.investHandler.refreshInvest" : {
+    "required uInt32 code" : 1,
+    "repeated InvestInfo investList" : 2
+  },
+
+  "game.investHandler.attendInvest" : {
+    "required uInt32 code" : 1,
+    "optional CurrentInvestInfo current" : 2
+  },
+
+  "game.investHandler.investProgress" : {
+    "required uInt32 code" : 1,
+    "optional string progress" : 2,
+    "repeated award cost" : 3
+  },
+
+  "game.investHandler.readyInvest" : {
+    "required uInt32 code" : 1,
+    "optional ProjectInfo newProject" : 2,
+    "repeated InvestInfo investList" : 3,
+    "optional uInt32 isFirstTime" : 4
+  },
+
+  "onNotifyInvestCompleteInfo" : {
+    "repeated CompleteInvestInfo completeInfo" : 1
+  },
+
+  "game.investHandler.getRecommendInvest{" : {
+    "repeated ProjectInfo result" : 1
+  },
+
+  "global.investHandler.inviteInvest" : {
+    "required uInt32 code" : 1,
+    "optional string id" : 2,
+    "repeated uInt32 tag" : 3
+  },
+
+  "game.investHandler.selfInvest" : {
+    "required uInt32 code" : 1,
+    "optional string id" : 2
+  },
+
+  "game.investHandler.togetherInvest" : {
+    "required uInt32 code" : 1,
+    "optional string id" : 2,
+    "optional uInt32 finishType" : 3
+  },
+
+  "onNotifyInvestFinishType" : {
+    "required string id" : 1,
+    "required uInt32 finishType" : 2,
+    "required ProjectInfo cooperate" : 3
+  },
+
+  "global.investHandler.getCooperateProjectInfo" : {
+    "required uInt32 code" : 1,
+    "optional ProjectInfo info" : 2
+  },
+
+  "global.leagueHandler.leagueGetInfo" : {
+    "required uInt32 code" : 1,
+    "optional leagueInfo leagueInfo" : 2,
+    "repeated leagueInfo leagueList" : 3,
+    "optional uInt32 leaveTime" : 4
+  },
+
+  "global.leagueHandler.leagueMemberInfo" : {
+    "required uInt32 code" : 1,
+    "repeated leagueMember memberList" : 2,
+    "repeated leagueApply applyList" : 3
+  },
+
+  "global.leagueHandler.leagueCreate" : {
+    "required uInt32 code" : 1,
+    "optional leagueInfo leagueInfo" : 2
+  },
+
+  "global.leagueHandler.leagueDissolve" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueJoin" : {
+    "required uInt32 code" : 1,
+    "optional leagueInfo leagueInfo" : 2
+  },
+
+  "global.leagueHandler.leagueExit" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueKickOut" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueQuery" : {
+    "required uInt32 code" : 1,
+    "optional leagueInfo leagueInfo" : 2
+  },
+
+  "global.leagueHandler.leagueOneKeyApply" : {
+    "required uInt32 code" : 1,
+    "repeated leagueInfo leagueList" : 2
+  },
+
+  "global.leagueHandler.leagueAgree" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueRefuse" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueJob" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueTransfer" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueHandler.leagueChangeInfo" : {
+    "required uInt32 code" : 1,
+    "required uInt32 type" : 2
+  },
+
+  "global.leagueHandler.leagueBuildGetInfo" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 dayExp" : 2,
+    "repeated uInt32 boxList" : 3,
+    "repeated leagueBuildInfo buildList" : 4,
+    "repeated leagueBuildRecord recordList" : 5
+  },
+
+  "global.leagueHandler.leagueBuild" : {
+    "required uInt32 code" : 1,
+    "optional leagueBuildInfo buildInfo" : 2
+  },
+
+  "global.leagueHandler.leagueGetBuildBox" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 boxList" : 2,
+    "repeated award awardList" : 3
+  },
+
+  "global.leagueHandler.leagueTechnologyGetInfo" : {
+    "required uInt32 code" : 1,
+    "repeated leagueTechnology technologyList" : 2
+  },
+
+  "global.leagueHandler.leagueTechnologyUpgrade" : {
+    "required uInt32 code" : 1,
+    "optional leagueTechnology technologyInfo" : 2
+  },
+
+  "onLeagueInfoNotify" : {
+    "optional uInt32 type" : 1,
+    "optional string uid" : 2,
+    "optional string name" : 3,
+    "optional leagueInfo leagueInfo" : 4,
+    "optional uInt32 leaveTime" : 5
+  },
+
+  "onLeagueMemberNotify" : {
+    "repeated leagueMember memberList" : 1
+  },
+
+  "onLeagueMemberOneNotify" : {
+    "optional leagueMember memberInfo" : 1
+  },
+
+  "onLeagueApplyNotify" : {
+    "repeated leagueApply applyList" : 1
+  },
+
+  "onLeagueBuildNotify" : {
+    "optional uInt32 dayExp" : 1,
+    "optional leagueBuildRecord recordInfo" : 2
+  },
+
+  "onLeagueBuildListNotify" : {
+    "repeated leagueBuildInfo buildList" : 1,
+    "repeated uInt32 boxList" : 2
+  },
+
+  "global.leagueProjectHandler.projectGetInfo" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 state" : 2,
+    "optional arrangementInfo arrangementInfo" : 3,
+    "optional negotiateInfo negotiateInfo" : 4,
+    "optional operationInfo operationInfo" : 5,
+    "optional uInt32 num" : 6,
+    "optional uInt32 rate" : 7,
+    "optional uInt32 buyNum" : 8,
+    "optional recoveryInfo recoveryInfo" : 9
+  },
+
+  "global.leagueProjectHandler.projectOpen" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueProjectHandler.projectDonation" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 num" : 2,
+    "optional uInt32 rate" : 3,
+    "optional uInt32 donationType" : 4
+  },
+
+  "global.leagueProjectHandler.projectDonationRanking" : {
+    "required uInt32 code" : 1,
+    "repeated donationRankInfo donationRankList" : 2
+  },
+
+  "global.leagueProjectHandler.projectNegotiate" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueProjectHandler.projectDamageRanking" : {
+    "required uInt32 code" : 1,
+    "repeated damageRankInfo damageRankList" : 2
+  },
+
+  "global.leagueProjectHandler.projectBuyNum" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 buyNum" : 2
+  },
+
+  "global.leagueProjectHandler.projectAccredit" : {
+    "required uInt32 code" : 1
+  },
+
+  "global.leagueProjectHandler.projectUnload" : {
+    "required uInt32 code" : 1,
+    "repeated award awardList" : 2
+  },
+
+  "onProjectRewardNotify" : {
+    "repeated award awardList" : 1
+  },
+
+  "onProjectInfoNotify" : {
+    "required uInt32 state" : 1,
+    "optional arrangementInfo arrangementInfo" : 2,
+    "optional negotiateInfo negotiateInfo" : 3,
+    "optional operationInfo operationInfo" : 4
+  },
+
+  "game.livePlatformHandler.query" : {
+    "required uInt32 code" : 1,
+    "repeated livePlatformInfo platforms" : 2
+  },
+
+  "game.livePlatformHandler.active" : {
+    "required uInt32 code" : 1,
+    "optional livePlatformInfo info" : 2
+  },
+
+  "game.livePlatformHandler.upgrade" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 platform" : 2,
+    "optional uInt32 level" : 3,
+    "optional string preEarnPerSecond" : 4,
+    "optional string curEarnPerSecond" : 5
+  },
+
+  "game.livePlatformHandler.recruitStaff" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 platform" : 2,
+    "optional uInt32 num" : 3
+  },
+
+  "game.livePlatformHandler.dispatch" : {
+    "required uInt32 code" : 1,
+    "repeated livePlatformCards updateInfo" : 2,
+    "optional uInt32 cardId" : 3
+  },
+
+  "game.livePlatformHandler.retire" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 platform" : 2,
+    "optional uInt32 cardId" : 3
+  },
+
+  "game.livePlatformHandler.addMoney" : {
+    "required uInt32 code" : 1,
+    "optional string totalCash" : 2
+  },
+
+  "onSyncLivePlatformEarnPerSecondNotify" : {
+    "required uInt32 platformId" : 1,
+    "required string data" : 2
+  },
+
+  "game.livePlatformActivityHandler.operate" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 scoreIds" : 2,
+    "optional uInt32 retId" : 3,
+    "optional string earn" : 4,
+    "optional string key" : 5
+  },
+
+  "game.livePlatformActivityHandler.operateAward" : {
+    "required uInt32 code" : 1
+  },
+
+  "game.livePlatformEventHandler.query" : {
+    "repeated livePlatformEventInfo info" : 1,
+    "required uInt32 level" : 2
+  },
+
+  "game.livePlatformEventHandler.thanks" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 platformId" : 2,
+    "optional string eventUid" : 3,
+    "repeated award award" : 4
+  },
+
+  "game.livePlatformEventHandler.eventSend" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 success" : 2,
+    "optional uInt32 platformId" : 3,
+    "optional uInt32 mgrExp" : 4,
+    "optional string eventUid" : 5,
+    "repeated award award" : 6
+  },
+
+  "game.livePlatformEventHandler.discount" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 platformId" : 2,
+    "optional string eventUid" : 3,
+    "repeated award award" : 4
+  },
+
+  "game.livePlatformEventHandler.choose" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 platformId" : 2,
+    "optional uInt32 choose" : 3,
+    "repeated uInt32 indexList" : 4,
+    "optional string eventUid" : 5,
+    "optional uInt32 mgrExp" : 6,
+    "repeated award award" : 7
+  },
+
+  "onSyncLivePlatformEventNotify" : {
+    "required string eventUid" : 1,
+    "required uInt32 platformId" : 2,
+    "required uInt32 type" : 3,
+    "required uInt32 id" : 4,
+    "optional uInt32 endTime" : 5
+  },
+
+  "onSyncLivePlatformMgrInfoNotify" : {
+    "required uInt32 mgrLv" : 1
+  },
+
+  "gate.gateHandler.queryServerList" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 serverList" : 2
+  },
+
+  "gate.gateHandler.queryEntry" : {
+    "required uInt32 code" : 1,
+    "optional string host" : 2,
+    "optional uInt32 port" : 3,
+    "optional string account" : 4,
+    "optional string token" : 5
+  },
+
+  "connector.entryHandler.entry" : {
+    "required uInt32 code" : 1,
+    "optional string token" : 2,
+    "optional uInt32 sessionId" : 3,
+    "optional string sdkResult" : 4
+  },
+
+  "game.loginHandler.login" : {
+    "required uInt32 code" : 1,
+    "optional roleBase rolebase" : 2,
+    "optional uInt32 serverTime" : 3,
+    "optional uInt32 serverOpenTime" : 4,
+    "optional uInt32 banChatEndTime" : 5,
+    "optional uInt32 forbidEndTime" : 6
+  },
+
+  "game.playerHandler.createRole" : {
+    "required uInt32 code" : 1,
+    "optional string uid" : 2,
+    "optional string name" : 3
+  },
+
+  "game.playerHandler.getServerTimeSecond" : {
+    "required uInt32 time" : 1
+  },
+
+  "game.mailHandler.queryMail" : {
+    "required uInt32 code" : 1,
+    "repeated roleMail list" : 2
+  },
+
+  "game.mailHandler.readMail" : {
+    "required uInt32 code" : 1,
+    "repeated int32 id" : 2
+  },
+
+  "game.mailHandler.receiveMail" : {
+    "required uInt32 code" : 1,
+    "repeated int32 id" : 2,
+    "repeated award item" : 3,
+    "repeated int32 errorNo" : 4
+  },
+
+  "game.mailHandler.deleteMail" : {
+    "required uInt32 code" : 1,
+    "repeated int32 id" : 2
+  },
+
+  "newMailNotify" : {
+    "repeated roleMail list" : 1
+  },
+
+  "game.missionHandler.getMission" : {
+    "required missionInfo mainMission" : 1,
+    "repeated missionInfo dailyMission" : 2,
+    "repeated missionInfo achievement" : 3,
+    "required uInt32 liveness" : 4,
+    "required uInt32 achievementPoints" : 5,
+    "repeated uInt32 hasReceiveLiveness" : 6,
+    "repeated uInt32 hasReceivePoints" : 7
+  },
+
+  "game.missionHandler.completeMission" : {
+    "required uInt32 code" : 1,
+    "optional missionInfo missionInfo" : 2,
+    "repeated award award" : 3,
+    "optional uInt32 liveness" : 4,
+    "optional uInt32 achievementPoints" : 5
+  },
+
+  "onNotifyMissionUpdate" : {
+    "optional missionInfo mainMission" : 1,
+    "repeated missionInfo dailyMission" : 2,
+    "repeated missionInfo achievement" : 3
+  },
+
+  "game.missionHandler.receiveLivenessReward" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2,
+    "repeated uInt32 hasReceive" : 3
+  },
+
+  "game.missionHandler.receiveAchievementPointsReward" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2,
+    "repeated uInt32 hasReceive" : 3
+  },
+
+  "onSyncOperateStartNotify" : {
+    "required operateInfo info" : 1
+  },
+
+  "onSyncOperateStopNotify" : {
+    "required operateInfo info" : 1
+  },
+
+  "game.operateHandler.query" : {
+    "repeated operateInfo infos" : 1
+  },
+
+  "game.operateHandler.queryFirst" : {
+    "required uInt32 isFirstPay" : 1,
+    "required uInt32 hadFetch" : 2
+  },
+
+  "game.operateHandler.fetchFirstPay" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 hadFetch" : 2,
+    "repeated award award" : 3
+  },
+
+  "onSyncPayFirstNotify" : {
+  },
+
+  "onSyncAddUpPayNotify" : {
+    "required uInt32 rmb" : 1
+  },
+
+  "game.operateAddUpPayHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated uInt32 fetchIds" : 3,
+    "optional uInt32 pay" : 4
+  },
+
+  "game.operateAddUpPayHandler.fetch" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 id" : 3,
+    "repeated award award" : 4
+  },
+
+  "onSyncDailyPayNotify" : {
+    "required uInt32 todayPay" : 1
+  },
+
+  "game.operateDailyPayHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated uInt32 fetchIds" : 3,
+    "optional uInt32 todayPay" : 4
+  },
+
+  "game.operateDailyPayHandler.fetch" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 id" : 3,
+    "repeated award award" : 4
+  },
+
+  "game.operateDailySignHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 hasReceiveMax" : 3,
+    "optional uInt32 lastReceiveTime" : 4,
+    "optional uInt32 buyTimes" : 5
+  },
+
+  "game.operateDailySignHandler.signIn" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated award award" : 3,
+    "optional uInt32 hasReceiveMax" : 4,
+    "optional uInt32 lastReceiveTime" : 5
+  },
+
+  "game.operateDailySignHandler.assistSignIn" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated award award" : 3,
+    "optional uInt32 hasReceiveMax" : 4,
+    "optional uInt32 buyTimes" : 5
+  },
+
+  "onSyncDaysPayNotify" : {
+    "required uInt32 day" : 1,
+    "required uInt32 rmb" : 2
+  },
+
+  "game.operateDaysPayHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated uInt32 fetchIds" : 3,
+    "repeated kv2 payDays" : 4
+  },
+
+  "game.operateDaysPayHandler.fetch" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 id" : 3,
+    "repeated award award" : 4
+  },
+
+  "onSyncOperateDiscountPayNotify" : {
+    "required uInt32 payId" : 1,
+    "required uInt32 count" : 2
+  },
+
+  "onSyncOperateDiscountPayAwardNotify" : {
+    "repeated award award" : 1
+  },
+
+  "game.operateDiscountHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated kv2 fetchIds" : 3,
+    "repeated kv2 payIds" : 4,
+    "optional uInt32 freeFetch" : 5
+  },
+
+  "game.operateDiscountHandler.check" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "required uInt32 id" : 3
+  },
+
+  "game.operateDiscountHandler.fetchPay" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 id" : 3,
+    "optional uInt32 fetchCount" : 4,
+    "repeated award award" : 5
+  },
+
+  "game.operateDiscountHandler.fetchFree" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 id" : 3,
+    "repeated award award" : 4
+  },
+
+  "game.operateLuckyTurntableHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 drawCount" : 3
+  },
+
+  "game.operateLuckyTurntableHandler.draw" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated award cost" : 3,
+    "optional uInt32 addDiamond" : 4,
+    "optional uInt32 multi" : 5
+  },
+
+  "game.operateSevenDayHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated uInt32 hasReceive" : 3
+  },
+
+  "game.operateSevenDayHandler.signIn" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated award award" : 3,
+    "repeated uInt32 hasReceive" : 4
+  },
+
+  "game.operateTreasureHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 freeDrawTimes" : 3,
+    "optional uInt32 totalDrawTimes" : 4,
+    "repeated uInt32 hasReceive" : 5,
+    "optional uInt32 diamondPool" : 6,
+    "repeated OperateTreasureDrawInfo record" : 7
+  },
+
+  "game.operateTreasureHandler.draw" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 freeDrawTimes" : 3,
+    "optional uInt32 totalDrawTimes" : 4,
+    "optional uInt32 diamondPool" : 5,
+    "repeated award award" : 6
+  },
+
+  "game.operateTreasureHandler.receive" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated uInt32 hasReceive" : 3
+  },
+
+  "game.operateTreasureHandler.buyDrawItem" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2
+  },
+
+  "OnNotifyOperateTreasureData" : {
+    "required uInt32 actId" : 1,
+    "required uInt32 freeDrawTimes" : 2,
+    "required uInt32 totalDrawTimes" : 3,
+    "repeated uInt32 hasReceive" : 4
+  },
+
+  "OnNotifyOperateTreasureDrawInfo" : {
+    "required string name" : 1,
+    "repeated award award" : 2
+  },
+
+  "game.operateTreasureHandler.queryDiamondPool" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 diamondPool" : 2
+  },
+
+  "onSyncOperateZeroGiftNotify" : {
+    "required uInt32 payId" : 1,
+    "optional uInt32 buyTime" : 2,
+    "optional uInt32 endTime" : 3
+  },
+
+  "onSyncOperateZeroGiftInfo" : {
+    "optional uInt32 actId" : 1
+  },
+
+  "game.operateZeroGiftHandler.queryInfo" : {
+    "optional uInt32 actId" : 1,
+    "optional uInt32 startTs" : 2,
+    "optional uInt32 stopTs" : 3
+  },
+
+  "game.operateZeroGiftHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated uInt32 fetchIds" : 3,
+    "optional uInt32 payId" : 4,
+    "optional uInt32 giftFetch" : 5,
+    "optional uInt32 buyTime" : 6,
+    "optional uInt32 endTime" : 7
+  },
+
+  "game.operateZeroGiftHandler.fetchGift" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "repeated award award" : 3
+  },
+
+  "game.operateZeroGiftHandler.fetchDaily" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 actId" : 2,
+    "optional uInt32 id" : 3,
+    "repeated award award" : 4
+  },
+
+  "onSyncCashPerSecondNotify" : {
+    "required string data" : 1
+  },
+
+  "onSyncTimerNotify" : {
+    "required uInt32 id" : 1
+  },
+
+  "onOfflineRevenueNotify" : {
+    "required uInt32 offlineTime" : 1,
+    "required uInt32 validTime" : 2,
+    "required string money" : 3
+  },
+
+  "onSyncPayRmbNotify" : {
+    "required uInt32 rmb" : 1
+  },
+
+  "onSyncOtherItemNotify" : {
+    "repeated award data" : 1
+  },
+
+  "onSyncChatBanRoleId" : {
+    "required string uid" : 1
+  },
+
+  "onSyncChatBanEndTime" : {
+    "required uInt32 banChatEndTime" : 1
+  },
+
+  "onSyncForbidEndTime" : {
+    "required uInt32 forbidEndTime" : 1
+  },
+
+  "onSyncKickUser" : {
+  },
+
+  "onNotifyReplaced" : {
+  },
+
+  "onNotifyPlayerPaySucceed" : {
+    "required uInt32 serialId" : 1
+  },
+
+  "global.queryHandler.queryPlayerInfo" : {
+    "required uInt32 code" : 1,
+    "optional PlayerBriefInfo info" : 2
+  },
+
+  "global.rankHandler.getRankInfo" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 type" : 2,
+    "repeated RankInfo rankInfo" : 3,
+    "optional RankInfo selfInfo" : 4
+  },
+
+  "global.rankHandler.getGuildRankInfo" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 type" : 2,
+    "repeated GuildRankInfo rankInfo" : 3,
+    "optional GuildRankInfo selfInfo" : 4
+  },
+
+  "global.rankHandler.getTopCarInfo" : {
+    "repeated rankTopCarInfo info" : 1
+  },
+
+  "game.rankHandler.getRankWorshipInfo" : {
+    "repeated uInt32 personStatus" : 1,
+    "repeated uInt32 leagueStatus" : 2
+  },
+
+  "game.rankHandler.rankWorship" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 hasWorshipList" : 2,
+    "optional uInt32 mainType" : 3,
+    "repeated award award" : 4
+  },
+
+  "game.recoveryHandler.recoveryGetInfo" : {
+    "required uInt32 code" : 1,
+    "optional recoveryInfo recoveryInfo" : 2
+  },
+
+  "onRecoveryInfoNotify" : {
+    "optional recoveryInfo recoveryInfo" : 1
+  },
+
+  "global.announcementHandler.getPostInfo" : {
+    "repeated settingsPostInfo postInfoList" : 1
+  },
+
+  "game.settingsHandler.giftCode" : {
+    "required uInt32 code" : 1,
+    "repeated award award" : 2
+  },
+
+  "game.settingsHandler.feedBack" : {
+    "required uInt32 code" : 1
+  },
+
+  "onSyncUpdateAnnouncement" : {
+  },
+
+  "game.shopHandler.query" : {
+    "repeated kv2 directSale" : 1,
+    "repeated shopMystery mystery" : 2
+  },
+
+  "game.shopHandler.buyDirectSale" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 shopId" : 2,
+    "optional uInt32 goodsId" : 3,
+    "optional uInt32 num" : 4,
+    "optional uInt32 total" : 5
+  },
+
+  "game.shopHandler.buyMystery" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 shopId" : 2,
+    "optional string goodsUid" : 3
+  },
+
+  "game.shopHandler.refreshFree" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 shopId" : 2,
+    "optional uInt32 remain" : 3
+  },
+
+  "game.shopHandler.refreshPay" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 shopId" : 2,
+    "optional uInt32 remain" : 3
+  },
+
+  "onAutoRefreshMysteryShopNotify" : {
+    "required shopMystery mystery" : 1
+  },
+
+  "game.shopTemporaryHandler.query" : {
+    "required uInt32 code" : 1,
+    "optional temporaryShopDetail detail" : 2
+  },
+
+  "game.shopTemporaryHandler.buy" : {
+    "required uInt32 code" : 1,
+    "optional string shopUid" : 2,
+    "optional string goodsUid" : 3
+  },
+
+  "onCreateShopInstanceNotify" : {
+    "required temporaryShopDetail detail" : 1
+  },
+
+  "onDestroyShopInstanceNotify" : {
+    "required string shopUid" : 1
+  },
+
+  "game.specialDeliveryHandler.getInfo" : {
+    "repeated uInt32 hasReceiveList" : 1
+  },
+
+  "game.specialDeliveryHandler.receive" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 hasReceiveList" : 2
+  },
+
+  "game.specialDeliveryHandler.assistReceive" : {
+    "required uInt32 code" : 1,
+    "repeated uInt32 hasReceiveList" : 2
+  },
+
+  "game.vipHandler.query" : {
+    "repeated uInt32 receivePrivilegeGifts" : 1,
+    "repeated uInt32 payIds" : 2
+  },
+
+  "game.vipHandler.receivePrivilegeGift" : {
+    "required uInt32 code" : 1,
+    "optional uInt32 vipLv" : 2,
+    "repeated award award" : 3
+  },
+
+  "onSyncVipNotify" : {
+    "required uInt32 vipLv" : 1,
+    "required uInt32 vipExp" : 2
+  },
+
+  "onSyncPayIdsNotify" : {
+    "repeated uInt32 payIds" : 1
+  }
+}

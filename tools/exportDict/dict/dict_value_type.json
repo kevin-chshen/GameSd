@@ -1,0 +1,32 @@
+{
+    "1": {
+        "value_type_id": 1,
+        "value_type_name": "钻石",
+        "oss_show": 0
+    },
+    "2": {
+        "value_type_id": 2,
+        "value_type_name": "金币",
+        "oss_show": 0
+    },
+    "3": {
+        "value_type_id": 3,
+        "value_type_name": "名望",
+        "oss_show": 0
+    },
+    "4": {
+        "value_type_id": 4,
+        "value_type_name": "火力",
+        "oss_show": 0
+    },
+    "5": {
+        "value_type_id": 5,
+        "value_type_name": "管理经验",
+        "oss_show": 0
+    },
+    "6": {
+        "value_type_id": 6,
+        "value_type_name": "流量",
+        "oss_show": 0
+    }
+}

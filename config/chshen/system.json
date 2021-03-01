@@ -1,0 +1,36 @@
+{
+    "platform": "android_cn",
+    "serverIdList": [
+        1003,
+        998
+    ],
+    "agentIdList": [
+        1
+    ],
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6400
+    },
+    "redisMyLogin": {
+        "password": "",
+        "host": "127.0.0.1",
+        "port": 6379
+    },
+    "mysql": {
+        "database": "sd_log_android_cn_s1001",
+        "username": "admin",
+        "password": "admin",
+        "host": "localhost",
+        "port": 3306
+    },
+    "mongo": {
+        "url": "mongodb://localhost:27017/admin",
+        "db": "sd_game_android_cn_s1001",
+        "interval": 3000
+    },
+    "heartbeat": 20,
+    "timeout": 3600,
+    "serverOpenTime": "2020-7-29 10:00:00",
+    "webPort": 3001,
+    "ipDbPath": "./ipDB/"
+}

@@ -1,0 +1,30 @@
+{
+    "platform": "android_cn",
+    "serverId": 1001,
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379
+    },
+    "redisMyLogin": {
+        "password": "",
+        "host": "127.0.0.1",
+        "port": 6400
+    },
+    "mysql": {
+        "database": "wpbz_log_android_cn_s1001",
+        "username": "admin",
+        "password": "123456",
+        "host": "localhost",
+        "port": 3306
+    },
+    "mongo": {
+        "url": "mongodb://localhost:27017/",
+        "db": "dzb3d",
+        "interval": 3000
+    },
+    "heartbeat": 20,
+    "timeout": 3600,
+    "serverOpenTime": "2020-05-01 09:30:26",
+    "webPort": 3001,
+    "ipDbPath": "./ipDB/"
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "type": "gate",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+	{
+        "type": "auth",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+    {
+        "type": "connector",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+    {
+        "type": "game",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+    {
+        "type": "log",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+    {
+        "type": "battle",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+    {
+        "type": "global",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    },
+    {
+        "type": "crossGame",
+        "token": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn"
+    }
+]

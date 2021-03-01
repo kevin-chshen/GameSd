@@ -1,0 +1,14 @@
+{
+    "1": {
+        "channel_id": 1,
+        "channel_name": "世界频道"
+    },
+    "2": {
+        "channel_id": 2,
+        "channel_name": "公会频道"
+    },
+    "3": {
+        "channel_id": 3,
+        "channel_name": "私聊频道"
+    }
+}

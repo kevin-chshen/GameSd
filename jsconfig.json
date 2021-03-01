@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "paths": {
+            "@root/*": ["app/*"],
+            "@code": ["app/constant/code"],
+            "@code/*": ["app/constant/*"],
+            "@util": ["app/lib/util"],
+            "@util/*": ["app/lib/util/*"],
+            "@mongo/*": ["app/dao/mongo/*"]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "platform": "android_cn",
+    "serverIdList": [1001, 1004],
+    "agentIdList": [1],
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379
+    },
+    "mysql": {
+        "database": "wpbz_log_android_cn_s1001",
+        "username": "admin",
+        "password": "admin",
+        "host": "localhost",
+        "port": 3306
+    },
+    "mongo": {
+        "url": "mongodb://localhost:27017/admin",
+        "db": "wpbz_game_android_cn_s1001",
+        "interval": 60000
+    },
+    "heartbeat": 20,
+    "timeout": 3600,
+    "serverOpenTime": "2020-05-01 09:30:26",
+    "webBackendKey": "demoKey",
+    "webBackendPort": 3000,
+    "webFnSdkKey": "eca82bbcf5d72bea32c5f97aadaf3b4",
+    "webPort": 3001,
+    "ipDbPath": "./ipDB/"
+}

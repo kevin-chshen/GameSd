@@ -1,0 +1,97 @@
+{
+    "gate": [
+        {
+            "id": "gate-server-1",
+            "host": "127.0.0.1",
+            "port": 4110,
+            "clientHost": "192.168.60.63",
+            "clientPort": 3010,
+            "frontend": true,
+            "args": "--inspect=23200"
+        }
+    ],
+    "auth": [
+        {
+            "id": "auth-server-1",
+            "host": "127.0.0.1",
+            "port": 4120,
+            "args": "--inspect=23140"
+        }
+    ],
+    "connector": [
+        {
+            "id": "connector-server-1",
+            "host": "127.0.0.1",
+            "port": 4150,
+            "clientHost": "192.168.60.63",
+            "clientPort": 4050,
+            "frontend": true,
+            "args": ""
+        },
+        {
+            "id": "connector-server-2",
+            "host": "127.0.0.1",
+            "port": 4151,
+            "clientHost": "192.168.60.63",
+            "clientPort": 4051,
+            "frontend": true,
+            "args": ""
+        }
+    ],
+    "log": [
+        {
+            "id": "log-server-1",
+            "host": "127.0.0.1",
+            "port": 4160,
+            "args": "--inspect=23160"
+        }
+    ],
+    "game": [
+        {
+            "id": "game-server-1",
+            "host": "127.0.0.1",
+            "port": 4170,
+            "args": "--inspect=23170"
+        },
+        {
+            "id": "game-server-2",
+            "host": "127.0.0.1",
+            "port": 4172,
+            "args": "--inspect=23172"
+        },
+        {
+            "id": "game-server-3",
+            "host": "127.0.0.1",
+            "port": 4173,
+            "args": "--inspect=23173"
+        },
+        {
+            "id": "game-server-4",
+            "host": "127.0.0.1",
+            "port": 4174,
+            "args": "--inspect=23174"
+        }
+    ],
+    "battle": [
+        {
+            "id": "battle-server-1",
+            "host": "127.0.0.1",
+            "port": 4180,
+            "args": "--inspect=23180"
+        },
+        {
+            "id": "battle-server-2",
+            "host": "127.0.0.1",
+            "port": 4181,
+            "args": "--inspect=23181"
+        }
+    ],
+    "global" : [
+        {
+            "id": "global-server-1",
+            "host": "127.0.0.1",
+            "port": 4190,
+            "args": "--inspect=23190"
+        }
+    ]
+}

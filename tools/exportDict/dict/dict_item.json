@@ -1,0 +1,10 @@
+{
+    "0": {
+        "item_id": 0,
+        "item_name": "测试",
+        "item_type": 0,
+        "item_type_name": "普通物品",
+        "quality": 0,
+        "level_req": 0
+    }
+}

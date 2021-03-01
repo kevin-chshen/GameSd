@@ -1,0 +1,12 @@
+
+{
+    "root": {"parent": "", "child": ["card","stage","star","fetter","car","aid","all"], "percentParent": [], "percentChild": ["root","all"]}
+    ,"card": {"parent": "root", "child": [], "percentParent": "", "percentChild": ["card","stage","star","fetter","technology"]}
+    ,"stage": {"parent": "root", "child": [], "percentParent": "card", "percentChild": []}
+    ,"star": {"parent": "root", "child": [], "percentParent": "card", "percentChild": []}
+    ,"fetter": {"parent": "root", "child": [], "percentParent": "card", "percentChild": []}
+    ,"technology": {"parent": "root", "child": [], "percentParent": "card", "percentChild": []}
+    ,"car": {"parent": "root", "child": [], "percentParent": "", "percentChild": []}
+    ,"all": {"parent": "root", "child": [], "percentParent": "root", "percentChild": []}
+
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `tbllog_chat` ADD did VARCHAR(64) NOT NULL DEFAULT "" AFTER user_ip;
